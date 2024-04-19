@@ -9,17 +9,17 @@ import Layout from "../../Layout.astro"
 
 	<div class="grid_1_1">
 		<div>
-			<img src="/billeder/piger.jpg" alt="piger">
-		</div>
-		<div>
 			<h2>Hvem er vi?</h2>
 			<p>Vi arbejder for at forebygge mistrivsel blandt piger og unge kvinder.</p>
 			<p>Alt for mange piger og unge kvinder har det dårligt mentalt. GirlTalk arbejder for at bremse den stigende mistrivsel og for at alle piger har en at tale med.</p>
 		</div>
+		<div>
+			<img src="/billeder/piger.jpg" alt="piger">
+		</div>
 	</div>
 
 	<img src="/billeder/talebobel1.svg" alt="talebobel" class="talebobel1">
-	<img src="/billeder/kedpige.svg" alt="ked af det pige">
+	<img src="/billeder/kedpige.svg" alt="ked af det pige" class="kedpige">
 
 	<div class="fomo_tekst">
 	<h2>FOMO - FEAR OF MISSING OUT?</h2>
@@ -31,7 +31,7 @@ import Layout from "../../Layout.astro"
 	<div class="grid_1_1_1">
 	<img src="/billeder/fact1.svg" alt="fact 1" class="fact1">
 	<img src="/billeder/fact2.svg" alt="fact 2" class="fact2">
-	<img src="/billeder/fact3.svg" alt="fact 3">
+	<img src="/billeder/fact3.svg" alt="fact 3" class="fact3">
 </div>
 
 <div class="topiger">
@@ -47,18 +47,21 @@ import Layout from "../../Layout.astro"
 		<p>Det er vigtigt at forstå, at ensomhed ikke kun handler om fysisk isolation, men også om følelsesmæssig forbindelse. Man kan føle sig ensom selv med mange venner, hvis man ikke føler sig forstået eller forbundet med dem, og omvendt kan man være alene uden at føle sig ensom, hvis man har stærke forbindelser til andre eller føler sig tilfreds med sig selv.</p>
 	</div>
 
-	<img src="/billeder/alenepige.svg" alt="alene pige">
+	<img src="/billeder/alenepige.svg" alt="alene pige" class="alene_pige">
 
 	<h2 class="tips_tekst">7 tips til at slippe af med FOMO</h2>
 
+
+
 	<div class="grid_1_4">
-<div>
-	<h2>1.</h2>
-</div>
-<div>
-	<p>Køb en dagbog</p>
-	<p>Træn dig i daglig taknemmelighed. Skriv tre ting ned hver dag, som du er taknemmelig for, for at undgå sammenligning med andre og fokusere på dit eget livs positiver frem for selvkritik.</p>
-</div>
+		<div>
+			<h2>&nbsp;1.</h2>
+		</div>
+		
+		<div>
+			<p>Køb en dagbog</p>
+			<p>Træn dig i daglig taknemmelighed. Skriv tre ting ned hver dag, som du er taknemmelig for, for at undgå sammenligning med andre og fokusere på dit eget livs positiver frem for selvkritik.</p>
+		</div>
 	</div>
 
 	<div class="grid_1_4">
@@ -131,6 +134,11 @@ import Layout from "../../Layout.astro"
 
 
 <style>
+	 * {
+                        margin: 0;
+                        box-sizing: border-box;
+
+                }
 	p{
 		font-family: "Archivo", sans-serif;
   font-optical-sizing: auto;
@@ -149,11 +157,12 @@ color: #273AAA;
 }
 
 p{
-	font-size: 35px;
+	font-size: 20px;
+	line-height: 30px;
 }
 
 h2{
-	font-size: 60px;
+	font-size: 38px;
 }
 	
 	.forsidebillede img{
@@ -165,6 +174,103 @@ h2{
 	}
 
 	.grid_1_1{
+		padding: 30px;
+	}
+
+	.grid_1_1 img{
+		padding-top: 60px;
+		padding-bottom: 60px;
+		width: 500px;
+	}
+
+	img.talebobel1, img.talebobel2, img.talebobel3{
+		width: 550px;
+	}
+
+	img.talebobel2, img.talebobel3 {
+		padding-top: 100px;
+	}
+
+	img.talebobel3{
+		padding-bottom: 100px;
+	}
+	
+	.fomo_tekst h2, .fomo_tekst p{
+		color: #FC4D5C;
+	}
+
+	.fomo_tekst h2 {
+		padding-top: 35px;
+		padding-bottom: 20px;
+		font-size: 30px;
+	}
+
+	.fomo_tekst p{
+		padding-bottom: 20px;
+	}
+	
+
+	img.kedpige{
+		width: 200px;
+	}
+
+	img.fact1, img.fact2, img.fact3 {
+		width: 400px;
+		padding: 10px;
+	}
+
+	img.fact1{
+		padding-top: 40px;
+	}
+
+	img.fact3{
+		padding-bottom: 70px;
+	}
+
+	.topiger img{
+		width: 500px;
+		padding-bottom: 50px;
+	}
+
+	.alene_tekst{
+		padding: 20px;
+	}
+	.alene_tekst h2{
+	color: #FC4D5C;
+	padding-bottom: 20px;
+}
+
+	img.alene_pige{
+		width: 400px;
+		height: 300px;
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+
+	h2.tips_tekst{
+		font-size: 30px;
+	}
+
+	.grid_1_4{
+		padding-top: 20px;
+		padding-bottom: 50px;
+	}
+
+	.girlpower img{
+		width: 250px;
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+
+	
+	@media (min-width: 800px){
+		p{
+	font-size: 35px;
+}
+h2{
+	font-size: 60px;
+}
+	.grid_1_1{
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		padding: 90px;
@@ -172,12 +278,15 @@ h2{
 		gap: 40px;
 	}
 
-	.fomo_tekst h2, .fomo_tekst p{
-		color: #FC4D5C;
-	}
+	
 
 	.talebobel1{
 		padding-left: 130px;
+		
+	}
+
+	img.talebobel1,  img.talebobel2, img.talebobel3 {
+		width: 100%;
 	}
 
 	.talebobel2, .talebobel3{
@@ -199,9 +308,7 @@ h2{
 padding-bottom: 100px;
 }
 
-.alene_tekst h2{
-	color: #FC4D5C;
-}
+
 
 .alene_tekst{
 	padding: 80px;
@@ -224,10 +331,8 @@ padding-bottom: 100px;
 .tips_tekst{
 	text-align: center;
 }
+	}
 
-.girlpower img{
-
-}
 
 
 </style>
